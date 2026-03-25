@@ -1,13 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-
 function CartPage() {
   const { cart, removeFromCart } = useContext(CartContext);
-
   return (
     <div>
       <h2>Your Cart</h2>
-
       {cart.length === 0 ? (
         <h3>Cart is empty</h3>
       ) : (
@@ -22,7 +19,6 @@ function CartPage() {
           >
             <h4>{item.name}</h4>
             <p>Price: ₹{item.price}</p>
-
             <button onClick={() => removeFromCart(item.id)}>
               Remove
             </button>
@@ -32,5 +28,4 @@ function CartPage() {
     </div>
   );
 }
-
 export default CartPage;
