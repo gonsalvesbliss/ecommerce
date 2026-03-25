@@ -2,14 +2,11 @@ import products from "../data/products";
 import Product from "../components/Product";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-
 function Home() {
   const { addToCart } = useContext(CartContext);
-
   return (
     <div>
       <h2>Products</h2>
-
       {products.length === 0 ? (
         <p>No products available</p>
       ) : (
@@ -20,5 +17,4 @@ function Home() {
     </div>
   );
 }
-
 export default Home;
